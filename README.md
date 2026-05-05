@@ -79,10 +79,6 @@ See the header comments in `scripts/evaluation.slurm` for ε options (`EPS_MODE`
 - `dataset_nano.py`, `engine.py`, `logger.py`, `output_data_convert.py`, `optim_factory.py`, `utils.py`: support modules.
 - `environment.yml`, `LICENSE`.
 
-## Not included
-
-- Checkpoints (`res*`), logs, plots, and job outputs.
-- Raw or merged LMDB datasets (you provide paths locally).
 
 ## Anonymization
 
