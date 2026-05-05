@@ -7,8 +7,8 @@
 #SBATCH --time=48:00:00
 #SBATCH --qos=standard
 #SBATCH --gres=gpu:4
-#SBATCH --output=vision_train_random_%j.out
-#SBATCH --error=vision_train_random_%j.err
+#SBATCH --output=train_val_random_%j.out
+#SBATCH --error=train_val_random_%j.err
 
 set -euo pipefail
 
@@ -28,15 +28,14 @@ if [[ ! -f "${REPO_ROOT}/train_val.py" ]]; then
 fi
 
 # User-overridable paths (anonymized defaults).
-OUTPUT_DIR="${OUTPUT_DIR:-${REPO_ROOT}/res_noprecompute_n2}"
-DATA_PATH="${DATA_PATH:-/path/to/nextham_pth_noprecompute}"
+OUTPUT_DIR="${OUTPUT_DIR:-${REPO_ROOT}/res}"
+DATA_PATH="${DATA_PATH:-/path/to/nextham_pth}"
 
 cd "${REPO_ROOT}"
 
 echo "Starting job ${SLURM_JOB_ID} on host $(hostname)"
 echo "REPO_ROOT=${REPO_ROOT}"
 echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-not_set}"
-nvidia-smi || true
 
 # NOTE: no --wa-lmdb-eigen-fallback flag on purpose.
 # This keeps the default WA fallback split: n//2.
