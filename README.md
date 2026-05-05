@@ -1,6 +1,6 @@
-# NextHAM Baseline Release
+# QHMat Baseline (NextHAM) Release
 
-Minimal code to convert merged Hamiltonian LMDB data into NextHAM-style `.pth` samples, train the baseline model, and run paper-style metrics (Hamiltonian MAE and ε).
+Code to convert merged Hamiltonian LMDB data into NextHAM-style `.pth` samples, train the baseline model, and run paper-style metrics (Hamiltonian MAE and ε).
 
 ## End-to-end workflow
 
