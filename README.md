@@ -19,18 +19,13 @@ Create and activate the conda environment from `environment.yml`.
 **Inputs (typical layout under your dataset root):**
 
 - `merged_lmdb/mat_ham.lmdb`
-- `merged_mat_ham_database_indices_matched.pt` (or your matching indices `.pt`)
+- `mat_ham_database_indices.pt` (or your matching indices `.pt`)
 
 **Output directory** (default below): `samples/` with numbered `.pth` files and split list files.
 
 From the repository root (where `lmdb_to_nextham_pth.py` lives):
 
 ```bash
-export H0_DATASET_ROOT=/path/to/H0_dataset
-# Optional: non-default filenames or output location
-# export MAT_HAM_LMDB=...
-# export DATABASE_INDICES_FILE=...
-# export LMDB_CONVERT_OUTPUT_DIR="${H0_DATASET_ROOT}/nextham_pth"
 sbatch scripts/lmdb_to_nextham_pth.slurm
 ```
 
