@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.log
+*.out
+*.err
+*.json
+*.pt
+*.pth
+*.tar
+*.tar.gz
+.DS_Store
